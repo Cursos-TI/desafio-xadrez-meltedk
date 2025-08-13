@@ -5,7 +5,7 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-	int torre, bispo, rainha;
+	//int torre, bispo, rainha;
 	int menu;
 	int i;
 
@@ -23,34 +23,34 @@ int main() {
 		switch(menu) {
 			case 1:
 				//Movimento da torre
-				printf("Digite quantas casas a torre irá percorrer: ");
-				scanf("%d", &torre);
+				//printf("Digite quantas casas a torre irá percorrer: ");
+				//scanf("%d", &torre);
 				printf("Movimento da torre: \n");
-				for(int i = 1; i <= torre; i++){
+				for(int i = 1; i <= 5; i++){
 					printf("Direita\n"); // Imprime a direção do movimento
 				}
 			break;
 			case 2:
 				//Movimento do bispo
-				printf("Digite quantas casas o bispo irá percorrer: ");
-				scanf("%d", &bispo);
+				//printf("Digite quantas casas o bispo irá percorrer: ");
+				//scanf("%d", &bispo);
 				i = 1;
 				printf("Movimento do bispo: \n");
-				while(i <= bispo) {
+				while(i <= 5) {
 					printf("Cima, Direita\n");
 				i++;
 				}
 			break;
 			case 3:
 				//Movimento da rainha
-				printf("Digite quantas casas a rainha irá percorrer: ");
-				scanf("%d", &rainha);
+				//printf("Digite quantas casas a rainha irá percorrer: ");
+				//scanf("%d", &rainha);
 				i = 1;
 				printf("Movimento da rainha: \n");
 				do {
 					printf("Esquerda\n");
 					i++;
-				} while(i <= rainha);
+				} while(i <= 8);
 			break;
 			case 4:
 				printf("Encerrando o programa...\n");
