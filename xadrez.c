@@ -5,60 +5,43 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-	//int torre, bispo, rainha;
-	int menu;
+	
 	int i;
+	int movimentoCompleto = 1; // Flag para controlar o movimento em 'L'
 
 	printf("\t*** Movimentos de Xadrez ***\n\n");
 
-	//Menu do usuário
-	do {
-		printf("Selecione a peça que deseja movimentar: \n");
-		printf("1. Torre.\n");
-		printf("2. Bispo.\n");
-		printf("3. Rainha.\n");
-		printf("4. Encerrar programa.\n");
-		scanf("%d", &menu);
+	//Movimento da torre
+	printf("Movimento da torre: \n");
+	for(int i = 1; i <= 5; i++){
+	printf("Direita\n"); // Imprime a direção do movimento
+	}
 
-		switch(menu) {
-			case 1:
-				//Movimento da torre
-				//printf("Digite quantas casas a torre irá percorrer: ");
-				//scanf("%d", &torre);
-				printf("Movimento da torre: \n");
-				for(int i = 1; i <= 5; i++){
-					printf("Direita\n"); // Imprime a direção do movimento
-				}
-			break;
-			case 2:
-				//Movimento do bispo
-				//printf("Digite quantas casas o bispo irá percorrer: ");
-				//scanf("%d", &bispo);
-				i = 1;
-				printf("Movimento do bispo: \n");
-				while(i <= 5) {
-					printf("Cima, Direita\n");
-				i++;
-				}
-			break;
-			case 3:
-				//Movimento da rainha
-				//printf("Digite quantas casas a rainha irá percorrer: ");
-				//scanf("%d", &rainha);
-				i = 1;
-				printf("Movimento da rainha: \n");
-				do {
-					printf("Esquerda\n");
-					i++;
-				} while(i <= 8);
-			break;
-			case 4:
-				printf("Encerrando o programa...\n");
-			break;
-			default:
-				printf("Opção inválida!\n");
+	//Movimento do bispo
+	i = 1;
+	printf("Movimento do bispo: \n");
+	while(i <= 5) {
+		printf("Cima, Direita\n");
+	i++;
+	}
+
+	//Movimento da rainha
+	i = 1;
+	printf("Movimento da rainha: \n");
+	do {
+		printf("Esquerda\n");
+		i++;
+	} while(i <= 8);
+
+	//Movimento do cavalo
+	printf("\nMovimento do cavalo: \n");
+	while(movimentoCompleto--) {
+
+		for(int i = 0; i < 2; i++) {
+			printf("Cima, "); // Imprime "Cima" duas vezes
 		}
-	} while(menu != 4);
+		printf("Direita\n\n"); // Imprime "Direita" duas vezes
+	}
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
