@@ -29,6 +29,7 @@ void moverRainha(int casas) {
 //main
 int main() {
 
+	int numCasasTorre, numCasasBispo, numCasasRainha;
 	int i;
 	int movimentoCompleto = 1; // Flag para controlar o movimento em 'L'
 
@@ -36,14 +37,20 @@ int main() {
 
 	//Movimento da torre
 	printf("\nMovimento da torre: \n");
-	moverTorre(5);
+	printf("Digite quantas casas você quer mover a torre para direita: ");
+	scanf("%d", &numCasasTorre);
+	moverTorre(numCasasTorre);
 
 	//Movimento do bispo
 	printf("\nMovimento do bispo: \n");
+	printf("Digite quantas casas você quer mover o bispo para diagonal superior direita: ");
+	scanf("%d", &numCasasBispo);
 	moverBispo(5);
 
 	//Movimento da rainha
 	printf("\nMovimento da rainha: \n");
+	printf("Digite quantas casas você quer mover a rainha para esquerda: ");
+	scanf("%d", &numCasasBispo);
 	moverRainha(8);
 
 	//Movimento do cavalo
