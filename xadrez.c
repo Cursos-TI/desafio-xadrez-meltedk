@@ -10,10 +10,11 @@ void moverTorre(int casas) {
 
 void moverBispo(int casas) {
 	if(casas > 0) {
-		for(int i = 1; i <= casas; i++) {
+		for(int i = 0; i < 1; i++) {
 			printf("Cima, ");
-			for(int j = 1; j == 1; j++){
+			for(int j = 0; j < 1; j++) {
 				printf("Direita\n");
+				moverBispo(casas - 1);
 			}
 		}
 	}
@@ -45,23 +46,23 @@ int main() {
 	printf("\nMovimento do bispo: \n");
 	printf("Digite quantas casas você quer mover o bispo para diagonal superior direita: ");
 	scanf("%d", &numCasasBispo);
-	moverBispo(5);
+	moverBispo(numCasasBispo);
 
 	//Movimento da rainha
 	printf("\nMovimento da rainha: \n");
 	printf("Digite quantas casas você quer mover a rainha para esquerda: ");
-	scanf("%d", &numCasasBispo);
-	moverRainha(8);
+	scanf("%d", &numCasasRainha);
+	moverRainha(numCasasRainha);
 
 	//Movimento do cavalo
 	printf("\nMovimento do cavalo: \n");
 	while(movimentoCompleto--) {
 		for(int i = 0, j = 5; i < j && j > i; i++, j--) {
-			printf("Cima, "); // Imprime "Cima" duas vezes
+			printf("Cima\n"); // Imprime "Cima" duas vezes
 			if(i == 0) {
 				continue;
 			} else {
-				printf("Direita\n\n"); // Imprime "Direita" duas vezes
+				printf("Direita\n\n"); // Imprime "Direita" uma vez
 				break;
 			}
 		}
